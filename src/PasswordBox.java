@@ -9,10 +9,10 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-public class PasswordBox{
-    static  String password = null ;
+public class PasswordBox {
+    static String password = null;
 
-    public static String show(){
+    public static String show() {
         Stage window = new Stage();
         window.initModality(Modality.APPLICATION_MODAL);
 
@@ -30,15 +30,15 @@ public class PasswordBox{
         passwordField.setMinWidth(280);
 
         Button confirm = new Button("Confirm");
-        confirm.setOnAction(e ->{
+        confirm.setOnAction(e -> {
             password = passwordField.getText();
             window.close();
         });
 
         Button cancel = new Button("Cancel");
-        cancel.setOnAction(e ->{
-           password = null;
-           window.close();
+        cancel.setOnAction(e -> {
+            password = null;
+            window.close();
         });
         confirm.setMinWidth(75);
         cancel.setMinWidth(75);
@@ -48,12 +48,12 @@ public class PasswordBox{
         HBox hBox = new HBox(20);
         hBox.setMinWidth(280);
         hBox.setMaxWidth(280);
-        hBox.setMargin(confirm,new Insets(10,10,0,0));
-        hBox.setMargin(cancel,new Insets(10,0,0,0));
+        hBox.setMargin(confirm, new Insets(10, 10, 0, 0));
+        hBox.setMargin(cancel, new Insets(10, 0, 0, 0));
         hBox.setAlignment(Pos.BOTTOM_RIGHT);
-        hBox.getChildren().addAll(confirm,cancel);
+        hBox.getChildren().addAll(confirm, cancel);
 
-        layout.getChildren().addAll(label,passwordField, hBox);
+        layout.getChildren().addAll(label, passwordField, hBox);
         layout.setAlignment(Pos.CENTER);
         Scene scene = new Scene(layout);
         window.setScene(scene);

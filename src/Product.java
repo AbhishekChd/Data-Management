@@ -6,10 +6,11 @@ public class Product {
     private final StringProperty productName = new SimpleStringProperty();
     private final FloatProperty productCost = new SimpleFloatProperty();
 
-    public Product(){}
+    public Product() {
+    }
 
 
-    public Product(Integer productId,String productName,Float productCost){
+    public Product(Integer productId, String productName, Float productCost) {
         setProductId(productId);
         setProductName(productName);
         setProductCost(productCost);

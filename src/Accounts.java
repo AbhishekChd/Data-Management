@@ -16,13 +16,12 @@ public class Accounts {
     @FXML
     Button addColumnButton;
 
-    private void initialize(URL location, ResourceBundle resources)  {
+    private void initialize(URL location, ResourceBundle resources) {
         System.out.println("Hello");
         dataTypeInput.setEditable(false);
         columnNameInput.setEditable(false);
         addColumnButton.setDisable(true);
     }
-
 
 
 }

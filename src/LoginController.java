@@ -19,12 +19,12 @@ public class LoginController {
     private PasswordField inputPassword;
 
     @FXML
-    void loginButtonClicked(ActionEvent event) throws IOException{
+    void loginButtonClicked(ActionEvent event) throws IOException {
         String username = inputUserName.getText();
         String password = inputPassword.getText();
-        if(username.equals("admin") && password.equals("admin")){
+        if (username.equals("admin") && password.equals("admin")) {
             System.out.println("Done");
-            Stage stage = (Stage)loginButton.getScene().getWindow();
+            Stage stage = (Stage) loginButton.getScene().getWindow();
             Parent root = FXMLLoader.load(getClass().getResource("DataView.fxml"));
             stage.setScene(new Scene(root));
         }

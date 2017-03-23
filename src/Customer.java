@@ -5,19 +5,19 @@ import javafx.beans.property.StringProperty;
 
 public class Customer {
 
-    private final StringProperty firstName = new SimpleStringProperty(this,"firstName");
-    private final StringProperty lastName = new SimpleStringProperty(this,"lastName");
-    private final StringProperty email = new SimpleStringProperty(this,"email");
-    private final LongProperty phone = new SimpleLongProperty(this,"phone");
-    private final StringProperty address = new SimpleStringProperty(this,"address");
-    private static int id=0;
+    private final StringProperty firstName = new SimpleStringProperty(this, "firstName");
+    private final StringProperty lastName = new SimpleStringProperty(this, "lastName");
+    private final StringProperty email = new SimpleStringProperty(this, "email");
+    private final LongProperty phone = new SimpleLongProperty(this, "phone");
+    private final StringProperty address = new SimpleStringProperty(this, "address");
+    private static int id = 0;
 
 
-    public Customer(String firstName,String lastName,String email,long phone,String address){
-        this(firstName,lastName,email,phone,address,id++);
+    public Customer(String firstName, String lastName, String email, long phone, String address) {
+        this(firstName, lastName, email, phone, address, id++);
     }
 
-    public Customer(String firstName,String lastName,String email,long phone,String address,int id){
+    public Customer(String firstName, String lastName, String email, long phone, String address, int id) {
         setFirstName(firstName);
         setLastName(lastName);
         setEmail(email);
