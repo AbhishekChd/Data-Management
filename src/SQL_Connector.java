@@ -1,7 +1,13 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.sql.*;
 
 public class SQL_Connector {
@@ -18,9 +24,10 @@ public class SQL_Connector {
 
     private Connection connection;
 
-    public SQL_Connector(String driverClassName, String dbURL)throws SQLException, ClassNotFoundException{
+    public SQL_Connector(String driverClassName, String dbURL)throws SQLException, ClassNotFoundException, IOException{
         Class.forName(driverClassName);
-        password = JOptionPane.showInputDialog("Enter password :");//comment this line to use your own password
+        PasswordBox passwordBox = new PasswordBox();
+        password = passwordBox.show();
         connection = DriverManager.getConnection(dbURL,user,password);
     }
 
